@@ -25,7 +25,14 @@ app.get('/reserve',function(req,res) {
 });
 
 app.get('/api/tables',function(req,res) {
-    for (var i =0; i<4; i++) {
+    for (var i = 0; i < 4; i++) {
         res.json(diners[i]);
     }
 });
+
+app.get('/api/waitlist',function(req,res) {
+    for (var i = 5; i < diners.length; i++) {
+        res.json(diners[i]);
+    }
+});
+
