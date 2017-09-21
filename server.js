@@ -11,3 +11,8 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:"application/vnd.api+json"}));
 
 var diners = [];
+
+app.get('/',function(req,res) {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
