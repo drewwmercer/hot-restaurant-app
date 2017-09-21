@@ -10,7 +10,6 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-
 </head>
 
 <body>
@@ -63,7 +62,6 @@
 
 
 <script type="text/javascript">
-
     function runTableQuery() {
 
         var currentURL = window.location.origin;
@@ -115,7 +113,6 @@
 
                 for (var i = 0; i < waitlistData.length; i++) {
 
-                    // Create the HTML Well (Section) and Add the table content for each reserved table
                     var waitlistSection = $("<div>");
                     waitlistSection.addClass('well');
                     waitlistSection.attr('id', 'waitlistWell-' + i + 1)
@@ -123,14 +120,12 @@
 
                     var tableNumber = i + 1;
 
-                    // Then display the remaining fields in the HTML (Section Name, Date, URL)
                     $("#waitlistWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber +
                         "</span> | " + waitlistData[i].customerID + "</h2>");
                 }
             });
     }
 
-    // This function resets all of the data in our tables. This is intended to let you restart a demo.
     function clearTable() {
 
         var currentURL = window.location.origin;
@@ -138,20 +133,15 @@
             url: currentURL + "/api/clear",
             method: "POST"
         })
-
     }
 
     $("#clear").on('click', function () {
         alert("Clearing...");
         clearTable();
 
-        // Refresh the page after data is cleared
         location.reload();
     })
 
-
-    // Run Queries!
-    // ==========================================
     runTableQuery();
     runWaitListQuery();
 </script>
