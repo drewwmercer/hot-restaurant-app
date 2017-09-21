@@ -1,0 +1,26 @@
+{
+  "name": "hot-restaurant-app",
+  "version": "1.0.0",
+  "description": "## Description Basic app demonstrating Node and Express with jQuery. Overall purpose is to help schedule reservation requests. Restaurant has just 5 tables available. First five requests get a reservation, every request after that is sent to the waiting list.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drewwmercer/hot-restaurant-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drewwmercer/hot-restaurant-app/issues"
+  },
+  "homepage": "https://github.com/drewwmercer/hot-restaurant-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
