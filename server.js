@@ -24,7 +24,7 @@ app.get('/reserve', function(req, res) {
   res.sendFile(path.join(__dirname, 'reserve.html'));
 });
 
-app.get('/api/tables', function(req, res) {
+app.post('/api/tables', function(req, res) {
   for (var i = 0; i < 4; i++) {
     res.json(diners[i]);
   }
