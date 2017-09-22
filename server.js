@@ -14,7 +14,12 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 // The data
-var diners = [];
+var diners = [{
+    "customerEmail": "fg",
+    "customerID": "2",
+    "customerName": "fd2",
+    "phoneNumber": "4"
+    }];
 
 // Routes
 app.get('/', function(req, res) {
